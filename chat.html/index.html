@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+    <link rel="stylesheet" href="style11.css">
+    <style>
+        a{
+            color: aliceblue;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+body{
+    
+    background-color: #000;
+    color: #f5f5f7;
+    line-height: 1.6;
+}
+
+
+
+
+.hero-section {
+    background-image: url(/DALL·E\ 2024-10-12\ 19.01.04\ -\ A\ sleek\,\ dark-themed\ restaurant\ setting\ with\ a\ luxurious\ feel.\ The\ interior\ features\ black\ marble\ tables\,\ dimly\ lit\ candles\,\ velvet\ chairs\,\ and\ metall.webp); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fdd700;
+
+}
+
+
+
+
+.hero-content {
+    z-index: 1;
+    text-align: center;
+
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeInDown 1.2s ease-in-out;
+    background-color: #000;
+    width: 100%;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 30px;
+}
+
+.hero-content .btn:hover {
+    background-color: #e5c100;
+    transform: translateY(-5px);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+h2{
+    background-color: #000;
+}
+
+#about-us {
+    padding: 80px 0;
+    background-color: #2b2b2b;
+    text-align: center;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffd700;
+    font-family: cursive;
+}
+#about-us a:hover{
+    text-decoration: underline;
+}
+#about-us a{
+    text-decoration: none;
+}
+
+#about-us p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e5e5e5;
+}
+
+#about-us .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+#about-us .icon {
+    text-align: center;
+    max-width: 150px;
+}
+
+#about-us .icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+#about-us .icon img:hover {
+    transform:rotate(360deg);
+    transition: transform 1s ease;
+}
+
+#about-us .icon h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffd700;
+    font-family: cursive;
+}
+
+
+#menu {
+    padding: 80px 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+    font-family: cursive;
+}
+#menu a:hover{
+    text-decoration: underline #fdd700;
+}
+#menu a{
+    text-decoration: none;
+}
+
+.menu-filters {
+    margin-bottom: 40px;
+}
+#feedback{
+    background-color: #000;
+    background-image: none;
+}
+#gallery a{
+    text-decoration: none;
+}
+#gallery a:hover{
+    text-decoration: underline #fdd700;
+}
+
+#gallery {
+    padding: 80px 0;
+    background-color: #2b2b2b;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+    font-family: cursive;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+
+#contact-us {
+    padding: 80px 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+#contact-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+    font-family: cursive;
+}
+
+#contact-us address {
+    font-style: normal;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+#contact-us a {
+    color: #ffd700;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+#contact-us a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: wavy;
+}
+
+footer a:hover {
+    text-decoration:wavy;
+}
+#feedback{
+    background-color: #000;
+    background-image: none;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.testimonial{
+    color: #fdd700;
+    text-align: center;
+}
+#testimonials {
+    padding: 80px 0;
+    background-color: #000000; 
+    color: #fff;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+.testimonial h2{
+    color: #fdd700;
+    justify-content: center;
+    font-size: 24px;
+
+}
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.menu-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
+}
+#menu {
+    padding: 80px 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffd700;
+}
+
+.menu-filters {
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background-color: #ffd700;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+    
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #ffd700;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.menu-item strong {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.order-button{
+    text-align: center;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px 0; 
+}
+
+.navbar {
+    list-style-type: none; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.navbar li {
+    margin: 0 20px; 
+
+}
+
+.navbar a {
+    color: #ffd700; 
+    text-decoration: none; 
+    font-size: 1.2rem;
+    transition: color 0.3s; }
+
+
+.navbar a:hover {
+    color: #fdd700;
+    text-decoration: underline; 
+}
+
+
+    </style>
+</head>
+<body>
+
+    
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>WELCOME TO THE ESSENCE</h1>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/menu.html">Menu</a></li>
+                    <li><a href="/gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <p>Delicious food, unforgettable ambiance</p><br><br>
+            <a href="/reservations.html" class="btn">Book Now</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+
+    </header>
+    
+    
+    <section id="about-us">
+        <a href="/about.html"><h2>About Us</h2></a>
+        <p>We started our journey in [1990] with a passion for exceptional food and service. Our commitment is to bring the best flavors from around the world to your table.</p>
+        <div class="icons">
+            <div class="icon">
+                <img src="/pexels-abhinavcoca-291528.jpg" height="200px">
+                <h3>Quality Ingredients</h3>
+            </div>
+            <div class="icon">
+                <img src="/pexels-elevate-1267320.jpg" alt="Expert Chefs">
+                <h3>Expert Chefs</h3>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="menu">
+        <a href="/menu.html"><h2>Our Menu</h2></a>
+        <div class="menu-filters">
+           
+            <a href="/menu.html" data-filter="starters"><button class="filter-btn">Starters</button></a>
+            <a href="/menu.html" data-filter="mains"><button class="filter-btn">Mains</button></a>
+            <a href="/menu.html" data-filter="desserts"><button class="filter-btn">Desserts</button></a>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="/pexels-geraldjakeabangan-2689419.jpg" alt="Dish Name">
+                <h3>BBQ specials</h3>
+                <p>Barbique Grill.</p>
+                <p><strong>$12.99</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="/DALL·E 2024-10-19 19.55.10 - A delicious gourmet pizza with a rustic presentation. The pizza is topped with a blend of mozzarella and fresh basil leaves, slices of heirloom tomato.webp" alt="Dish Name">
+                <h3>pizza specials</h3>
+                <p>Gourmet Pizza.</p>
+                <p><strong>$14.99</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="/DALL·E 2024-10-13 19.31.45 - A beautifully presented South Indian dosa on a plate, served with sambar and coconut chutney. The dosa is golden brown and crispy, perfectly folded, w.webp" alt="Dish Name">
+                <h3>Special Dosa</h3>
+                <p>Our special dosa.</p>
+                <p><strong>$12.99</strong></p>
+            </div>
+            <div class="menu-item">
+                <img src="/pexels-enginakyurt-2673353(2) - Copy.jpg" alt="Dish Name">
+                <h3>Chicken</h3>
+                <p>Our specials.</p>
+                <p><strong>$12.99</strong></p>
+            </div>
+            <div class="order-button">
+
+            </div>
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2 style="color: #fdd700;">What Our Customers Say </h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <img src="/pexels-olly-845457.jpg" alt="Yash Raj">
+                <blockquote>"Best dining experience I've ever had!"</blockquote>
+                <p>Yash Raj</p>
+            </div>
+            <div class="testimonial">
+                <img src="/pexels--rahulshah--899357.jpg" alt="Deepak Kumar">
+                <blockquote>"Delicious food and wonderful service!"</blockquote>
+                <p>Deepak Kumar</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="gallery">
+        <a href="/gallery.html"><h2>Gallery</h2></a>
+        <div class="gallery-grid">
+            <img src="/DALL·E 2024-10-12 19.01.04 - A sleek, dark-themed restaurant setting with a luxurious feel. The interior features black marble tables, dimly lit candles, velvet chairs, and metall.webp" alt="Gallery Image 1">
+            <img src="/DALL·E 2024-10-19 15.59.03 - A captivating restaurant scene showcasing a beautifully plated dish, combining dark and light themes. The background features elegant dim lighting wit.webp" alt="Gallery Image 2">
+            <img src="pexels-chanwalrus-941861.jpg" alt="Gallery Image 3">
+            <img src="/pexels-pixabay-260922.jpg">
+            <img src="/pexels-wildlittlethingsphoto-696218.jpg">
+        </div>
+    </section>
+
+    <section id="feedback" style="margin: 40px 0; text-align: center;">
+        <marquee><h2 style="color: #fdd700;">We'd Love to Hear Your Thoughts!</h2></marquee>
+        <p style="color: #fdd700;">Your feedback helps us improve and serve you better. Please take a moment to share your experience.</p>
+        <a href="feedback.html" style="text-decoration: none;">
+            <button style="padding: 10px 20px; background-color: #28a745; color: rgb(0, 0, 0); border: none; border-radius: 4px; cursor: pointer;">
+                Leave Feedback
+            </button>
+        </a>
+    </section>
+    <section id="contact-us">
+        <a href="contact.html"><h2>Contact Us</h2></a>
+        <marquee><p>Have a question? Reach out to us below!</p></marquee>
+        <address>
+            <strong>Restaurant Name</strong><br>
+            123 Street, City, Country<br>
+            <a href="mailto:info@restaurant.com">info@restaurant.com</a><br>
+            (123) 456-7890
+        </address>
+        
+    </section>
+
+    
+    <footer>
+        <p>Follow us on:</p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        <p>&copy; 2024 Restaurant Name</p>
+    </footer>
+
+
+
+<script>
+    document.getElementById('reservation-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Basic validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const date = document.getElementById('date').value;
+        const guests = document.getElementById('guests').value;
+
+        if (name === '' || email === '' || date === '' || guests < 1) {
+            alert('Please fill in all fields correctly.');
+        } else {
+            alert('Reservation confirmed! We look forward to welcoming you.');
+            // Here you would normally send the data to the server
+            document.getElementById('reservation-form').reset();
+        }
+    });
+</script>
+
+
+</body>
+</html>

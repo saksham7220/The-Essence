@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .donation-button {
+            background-color: #1db954;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .donation-button:hover {
+            background-color: #17a645;
+        }
+
+        .donation-section {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Support Our Restaurant</h2>
+
+    <div class="donation-section">
+        <!-- Donation Button -->
+        <button class="donation-button" id="donateBtn">Donate Now</button>
+    </div>
+
+    <script>
+        document.getElementById("donateBtn").addEventListener("click", function() {
+            // Redirect to PayPal donation page
+            window.location.href = "https://www.paypal.com/donate?business=YOUR_PAYPAL_EMAIL&item_name=Support+Our+Restaurant&currency_code=USD";
+        });
+    </script>
+
+</body>
+</html>

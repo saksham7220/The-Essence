@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.reservation-container {
+    background-image: url('https://example.com/restaurant-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.reservation-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.reservation-content {
+    background-color: rgba(44, 44, 44, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f9c74f;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #f9c74f;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #f77f00;
+    outline: none;
+}
+
+.reserve-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9c74f;
+    border: none;
+    color: #2c2c2c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #f77f00;
+}
+
+
+@media (max-width: 600px) {
+    .reservation-content {
+        padding: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="reservation-container">
+        <div class="reservation-content">
+            <h1 class="reservation-title">Reserve Your Table</h1>
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+1234567890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" min="1" max="20" value="2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="requests">Special Requests</label>
+                    <textarea id="requests" placeholder="Any special requests?"></textarea>
+                </div>
+
+                <button type="submit" class="reserve-button">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">
+     
+document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const guests = document.getElementById('guests').value;
+
+    if (name && email && phone && date && time && guests) {
+        alert(`Reservation successful! \nName: ${name}\nDate: ${date}\nTime: ${time}\nGuests: ${guests}`);
+    } else {
+        alert('Please fill out all required fields.');
+    }
+});
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="style" href="style.css">
+    <style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffd700;
+    color: #333;
+}
+
+.header {
+    background-color: #333;
+    color:#ffd700;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    color:#ffd700;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header nav ul li a:hover {
+    background-color: #555;
+}
+
+.menu {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.menu-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #ffd700;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.menu-grid img:hover{
+    transform: scale(1.1);
+}
+#h2{
+    text-align: center;
+}
+</style>
+    
+</head>
+<body>
+
+    
+    <header class="header">
+        <h1>Delicious Bites</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="menu">
+        
+        <h2 id="appetizers">Appetizers</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-item">
+                <img src="pexels-chiecharon-959926.jpg" alt="Appetizer 1">
+                <h3>Garlic Bread</h3>
+                <p>Toasted garlic bread with butter and herbs</p>
+                <span>4.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="/pexels-pixabay-434283.jpg" alt="Appetizer 2">
+                <h3>Bruschetta</h3>
+                <p>Grilled bread topped with tomatoes and basil</p>
+                <span>5.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="/pexels-valeriya-1893561.jpg" alt="Appetizer 2">
+                <h3>Valeriya</h3>
+                <p>Appetizer</p>
+                <span>8.99$</span>
+            </div>
+        </div>
+        <h2 id="appetizers">Starters</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-item">
+                <img src="pexels-enginakyurt-2347311(1).jpg" alt="Appetizer 1">
+                <h3>Veg Noodles</h3>
+                
+                <span>4.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="pexels-abhishek-mahajan-2249012-3928854.jpg" alt="Appetizer 2">
+                <h3>Paneer tikka </h3>
+                
+                <span>5.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="pexels-aperture-photography-2919538-28445591.jpg" alt="Appetizer 2">
+                <h3>Bruschetta</h3>
+                <p>Grilled bread topped with tomatoes and basil</p>
+                <span>5.99$</span>
+            </div>
+            
+        </div>
+
+        
+        <h2 id="main-course">Main Course</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="DALL·E 2024-10-13 19.31.45 - A beautifully presented South Indian dosa on a plate, served with sambar and coconut chutney. The dosa is golden brown and crispy, perfectly folded, w.webp" alt="Main Course 1">
+                <h3>Dosa</h3>
+                <p>Salmon fillet served with seasonal vegetables</p>
+                <span>14.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="pexels-anilsharma65-10905933.jpg" alt="Main Course 2">
+                <h3>Kadhai paneer</h3>
+                <p>Grilled steak with crispy fries</p>
+                <span>18.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="pexels-enginakyurt-2673353(2).jpg" alt="Appetizer 2">
+                <h3>Chicken</h3>
+                <p>Specail handi</p>
+                <span>5.99$</span>
+            </div>
+        </div>
+
+        
+        <h2 id="desserts">Desserts</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="lavacake.jpg" alt="Dessert 1">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Warm chocolate cake with molten center</p>
+                <span>6.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="pexels-abhinavcoca-291528.jpg" alt="Dessert 2">
+                <h3>Cheesecake</h3>
+                <p>Classic creamy cheesecake with berry compote</p>
+                <span>7.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="/pexels-layyana-sheridean-1477746-2846337.jpg" alt="Appetizer 2">
+                <h3>Icecreame</h3>
+                <p>Chocolate flavoured Icecreame</p>
+                <span>5.99$</span>
+            </div></div>
+        <h2 id="desserts">Beverages</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="/pexels-chevanon-312418.jpg" alt="Dessert 1">
+                <h3>Coffee</h3>
+                <p>Warm chocolate cake with molten center</p>
+                <span>6.99$</span>
+            </div>
+        
+            <div class="menu-item">
+                <img src="pexels-marta-dzedyshko-1042863-2775860.jpg" alt="Dessert 2">
+                <h3>Soft drink</h3>
+                <p></p>
+                <span>7.99$</span>
+            </div>
+            <div class="menu-item">
+                <img src="/pexels-anna-zanovelli-bacci-1998392651-29010896.jpg" alt="Appetizer 2">
+                <h3>Chocolate drink</h3>
+                <p>Chocolate flavoued drink</p>
+                <span>5.55$</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Delicious Bites | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Gallery</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffd700;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+.header {
+    background-color: #333;
+    color:#ffd700;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    color:#ffd700;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header nav ul li a:hover {
+    background-color: #555;}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Restaurant Gallery</h1>
+        <p>Explore our delicious dishes!</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        
+    </header>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="/pexels-chanwalrus-941861.jpg" alt="Dish 1" onclick="openModal();currentSlide(1)">
+        </div>
+        <div class="gallery-item">
+            <img src="/pexels-wildlittlethingsphoto-696218.jpg" alt="Dish 2" onclick="openModal();currentSlide(2)">
+        </div>
+        <div class="gallery-item">
+            <img src="/DALL·E 2024-10-13 19.31.55 - A vibrant assortment of traditional Indian dishes beautifully arranged on plates, including rich curries, naan bread, tandoori chicken, biryani, and c.webp" alt="Dish 3" onclick="openModal();currentSlide(3)">
+        </div>
+        <div class="gallery-item">
+            <img src="/DALL·E 2024-10-16 22.09.49 - A bright and cheerful restaurant interior featuring a modern dining space with light wood furnishings, large windows allowing sunlight to flood in, an.webp" alt="Dish 4" onclick="openModal();currentSlide(4)">
+        </div>
+        <div class="gallery-item">
+            <img src="/The restauran - Copy.jpg" alt="Dish 5" onclick="openModal();currentSlide(5)">
+        </div>
+        <div class="gallery-item">
+            <img src="/DALL·E 2024-10-12 19.00.49 - A luxurious dark-themed restaurant with an ultra-modern design. The setting features deep black and gold elements, with sleek furniture and intricate .webp" alt="Dish 6" onclick="openModal();currentSlide(6)">
+        </div>
+        <div class="gallery-item">
+            <img src="/DALL·E 2024-10-12 19.01.04 - A sleek, dark-themed restaurant setting with a luxurious feel. The interior features black marble tables, dimly lit candles, velvet chairs, and metall.webp" alt="Dish 7" onclick="openModal();currentSlide(7)">
+        </div>
+        <div class="gallery-item">
+            <img src="/pexels-elevate-1267320.jpg" alt="Dish 8" onclick="openModal();currentSlide(8)">
+        </div>
+    </section>
+
+    
+    <div id="lightboxModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="DALL·E 2024-10-12 19.01.04 - A sleek, dark-themed restaurant setting with a luxurious feel. The interior features black marble tables, dimly lit candles, velvet chairs, and metall.webp" >
+            </div>
+            <div class="mySlides">
+                <img src="/DALL·E 2024-10-13 19.31.45 - A beautifully presented South Indian dosa on a plate, served with sambar and coconut chutney. The dosa is golden brown and crispy, perfectly folded, w.webp" alt="Dish 2">
+            </div>
+            <div class="mySlides">
+                <img src="/DALL·E 2024-10-13 19.31.55 - A vibrant assortment of traditional Indian dishes beautifully arranged on plates, including rich curries, naan bread, tandoori chicken, biryani, and c.webp" alt="Dish 3">
+            </div>
+            <div class="mySlides">
+                <img src="/DALL·E 2024-10-16 22.09.49 - A bright and cheerful restaurant interior featuring a modern dining space with light wood furnishings, large windows allowing sunlight to flood in, an.webp" alt="Dish 4">
+            </div>
+            <div class="mySlides">
+                <img src="/Aboutimage.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="images/food6.jpg" alt="Dish 6">
+            </div>
+            <div class="mySlides">
+                <img src="images/food7.jpg" alt="Dish 7">
+            </div>
+            <div class="mySlides">
+                <img src="images/food8.jpg" alt="Dish 8">
+            </div>
+
+>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+
+    <script src="script.js">
+
+function openModal() {
+    document.getElementById("lightboxModal").style.display = "block";
+}
+
+
+function closeModal() {
+    document.getElementById("lightboxModal").style.display = "none";
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+    </script>
+</body>
+</html>
+
+

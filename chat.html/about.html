@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+.about-container {
+    background-image: url('https://example.com/restaurant-about-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff;
+    position: relative;
+}
+
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: -1;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #f9c74f;
+    margin-bottom: 30px;
+}
+
+.about-subtitle {
+    font-size: 1.8rem;
+    color: #f77f00;
+    margin-top: 20px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: #f9c74f;
+}
+
+
+@media (max-width: 600px) {
+    .about-content {
+        padding: 20px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+}
+.header {
+    background-color: #333;
+    color:#ffd700;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #000;
+    height: 40px;
+}
+
+.header nav ul li a {
+    color:#ffd700;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header nav ul li a:hover {
+    background-color: #555;}
+
+
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <div class="about-content">
+            <h1 class="about-title">About Us</h1>
+            <header class="header">
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            
+                        </ul>
+                    </nav>
+            <p class="about-text">
+                Welcome to <strong>Our Restaurant</strong>, where culinary excellence meets exceptional hospitality. Since our establishment in [Year], we have been dedicated to creating memorable dining experiences, blending flavors from around the world with a modern twist.
+            </p>
+            <p class="about-text">
+                Our chefs use only the freshest ingredients to craft dishes that celebrate the richness of taste and the artistry of presentation. Whether you're here for a casual meal or a special occasion, we offer a warm, inviting ambiance that complements our diverse menu.
+            </p>
+            <h2 class="about-subtitle">Our Mission</h2>
+            <p class="about-text">
+                We believe in more than just serving food. Our mission is to create a place where people can gather, celebrate, and enjoy the finest dining experience. With a focus on sustainability, we source our ingredients locally and aim to reduce our environmental footprint.
+            </p>
+            <h2 class="about-subtitle">Our Story</h2>
+            <p class="about-text">
+                Born out of a passion for food and community, our journey began with a small kitchen and a big dream. Today, we are proud to be one of the top-rated restaurants in the city, known for our signature dishes and customer-centric approach. Come, be part of our story!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
